@@ -1,0 +1,24 @@
+{
+  "name": "cloudscat-oj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "bash deploy.sh",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clouds-cat/CloudsCat-OJ.git"
+  },
+  "author": "gsjztle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clouds-cat/CloudsCat-OJ/issues"
+  },
+  "homepage": "https://github.com/clouds-cat/CloudsCat-OJ#readme",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
