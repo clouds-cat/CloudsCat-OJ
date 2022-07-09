@@ -9,7 +9,7 @@ module.exports = {
         lineNumbers: true // 代码块显示行号
     },
     themeConfig: {
-        sidebarDepth: 2,
+        sidebarDepth: 3,
         nav: [
             { text: 'Demo', link: '/' },
             { text: 'GitHub首页', link: 'https://github.com/clouds-cat/' },
