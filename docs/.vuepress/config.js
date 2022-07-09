@@ -39,11 +39,14 @@ module.exports = {
             {
                 title: '使用文档',
                 collapsable: true,
+                children:[
+                    '/use/',
+                ]
             },
         ]
 
-        
+
     },
-    
+
 
 }
