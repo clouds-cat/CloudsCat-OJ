@@ -6,10 +6,13 @@ module.exports = {
     ],
     base: '/CloudsCat-OJ/',
     markdown: {
-        lineNumbers: true // 代码块显示行号
+        lineNumbers: true ,// 代码块显示行号
+        toc: {
+            includeLevel:[1, 2, 3, 4]
+        }
     },
     themeConfig: {
-        sidebarDepth: 2,
+        sidebarDepth: 2 ,
         nav: [
             { text: 'Demo', link: '/' },
             { text: 'GitHub首页', link: 'https://github.com/clouds-cat/' },
@@ -42,6 +45,7 @@ module.exports = {
                 children:[
                     '/use/',
                     '/use/judge',
+
                 ]
             },
         ]
