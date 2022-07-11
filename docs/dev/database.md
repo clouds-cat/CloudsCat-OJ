@@ -28,7 +28,8 @@
 |   字段名    |   类型   | 长度 | 是否允许为空 |                             备注                             |
 | :---------: | :------: | :--: | :----------: | :----------------------------------------------------------: |
 |   user_id   | varchar  |  20  |      N       |                    用户id、用户名（主键）                    |
-|  password   | varchar  |  20  |      N       |                         密码（加密）                         |
+|  password   | varchar  | 100  |      N       |                      密码（md5 + salt）                      |
+|    salt     | varchar  | 100  |      N       |                         盐值（uuid）                         |
 |    nick     | varchar  |  30  |      N       |                             昵称                             |
 |    email    | varchar  |  60  |      N       |                             邮箱                             |
 |   status    |   char   |  1   |      N       |                       是否禁用（Y/N）                        |
