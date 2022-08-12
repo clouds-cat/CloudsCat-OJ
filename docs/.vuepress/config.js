@@ -36,7 +36,7 @@ module.exports = {
                 children: [
                     '/dev/',
                     '/dev/database',
-                    '/dev/xiupeng',
+                    '/dev/devstandard',
                 ]
             },
             {
