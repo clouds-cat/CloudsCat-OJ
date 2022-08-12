@@ -12,9 +12,9 @@
         + 删除：/delete
             + 请求方式：POST
             + 统一批量删除，请求参数用List
-            + 分页查询：/findListPage
+        + 分页查询：/findListPage
             + 请求方式：POST
-            + 不分页查询：/findList
+        + 不分页查询：/findList
             + 请求方式：POST
 2. 方法命名
     - 对于Controller以及对应sercice、mapper的命名，与请求的url保持一致。
