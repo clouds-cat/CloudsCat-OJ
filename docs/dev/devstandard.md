@@ -2,20 +2,26 @@
 
 ## api的编写规范：
 1. 针对某个 `controller` 为例：`ProblemController`
-    - 统一访问路径：`/api/problem`
+    - 统一访问路径`/api/problem
         + 单个获取：{id}
             + 请求方式：`GET`
-        + 增加：`/add`
+            
+        + 增加：/add
             + 请求方式：`POST`
-        + 修改：`/update`
+            
+        + 修改：/update
             + 请求方式：`PUT`
-        + 删除：`/delete`
+            
+        + 删除：/delete
             + 请求方式：`POST`
             + 统一批量删除，请求参数用List
-            + 分页查询：`/findListPage`
-            + 请求方式：``POST`
-            + 不分页查询：`/findList`
+            
+        + 分页查询：/findListPag
             + 请求方式：`POST`
+            
+         + 非分页查询：/findList
+            + 请求方式：`POST`
+    
 2. 方法命名
     - 对于 `Controller` 以及对应 `sercice`、`mapper` 的命名，与请求的url保持一致。
 
@@ -39,7 +45,7 @@ public void delete(Long id) {
         }
     }
  ```
-2. 对于增、删、改接口的 `service` 的对应方法执行需抛出自定义异常，且用 `SqlConstant.SUCCESS` 常量判断 $sql$ 的执行成功与否，如：
+2. 对于增、删、改接口的 `service` 的对应方法执行需抛出自定义异常，且用 `SqlConstant.SUCCESS` 常量判断 sql 的执行成功与否，如：
  ```java
 public void add(ProblemDTO problemDTO) {
         Problem problem = new Problem();
