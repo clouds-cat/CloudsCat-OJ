@@ -18,6 +18,8 @@
 | 4    | tag         | 标签信息         |      |
 | 5    | user_time   | 用户-团队 关联表 |      |
 | 6    | problem_tag | 题目-标签 关联表 |      |
+| 7    | solution    | 运行结果表       |      |
+| 8    | source_code | 源代码           |      |
 
 
 
@@ -68,7 +70,7 @@
 |    level     |   int    | 11   |      N       |                           题目难度                           |
 |  time_limit  |   int    | 11   |      N       |         时间限制(ms)，默认为c/c++限制,其它语言为2倍          |
 | memory_limit |   int    | 11   |      N       |         空间限制(mb)，默认为c/c++限制,其它语言为2倍          |
-|    status    |   char   | 1    |      N       |                       是否可见（Y/N）                        |
+|    status    |          | 1    |      N       |                       是否可见（Y/N）                        |
 |      ac      |   int    | 11   |      Y       |                   通过（Accepted）的提交数                   |
 |      wa      |   int    | 11   |      Y       |                 错误（Wrong Answer）的提交数                 |
 |     tle      |   int    | 11   |      Y       |             超时（Time Limit Exceeded）的提交数              |
@@ -93,6 +95,31 @@
 | :--------: | :-----: | :--: | :----------: | :------: |
 | problem_id |   int   |  11  |      N       | 联合主键 |
 |   tag_id   | varchar |  20  |      N       | 联合主键 |
+
++ `solution` 运行结果表
+
+|   字段名    |   类型   | 长度 | 是否允许为空 |        备注        |
+| :---------: | :------: | ---- | :----------: | :----------------: |
+| solution_id |   long   | 18   |      N       |   评测id（主键）   |
+| problem_id  |   int    | 11   |      N       |      题目编号      |
+|   user_id   | varchar  | 20   |      N       |   用户id、用户名   |
+|    time     |   int    | 11   |      N       |      运行时间      |
+|   memory    |   int    | 11   |      N       |      运行内存      |
+|   result    |   int    | 6    |      N       |      运行结果      |
+|    socre    |   int    | 11   |      N       | 分数（通过百分比） |
+|  language   |   int    | 11   |      N       |      代码语言      |
+| code_length |   int    | 11   |      N       |      代码长度      |
+|   visible   |   char   | 1    |      N       |  是否可见（Y/N）   |
+| submit_time | datetime | -    |      Y       |      提交时间      |
+
++ `source_code` 源代码
+
+|   字段名    | 类型 | 长度 | 是否允许为空 |      备注       |
+| :---------: | :--: | :--: | :----------: | :-------------: |
+| solution_id | long |  18  |      N       | 评测 id（主键） |
+|    code     | text |  -   |      N       |     源代码      |
+
+
 
 ::: warning
 
