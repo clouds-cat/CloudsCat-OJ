@@ -20,6 +20,7 @@
 | 6    | problem_tag | 题目-标签 关联表 |      |
 | 7    | solution    | 运行结果表       |      |
 | 8    | source_code | 源代码           |      |
+| 9    | news        | 新闻（摘要）表   |      |
 
 
 
@@ -118,6 +119,17 @@
 | :---------: | :--: | :--: | :----------: | :-------------: |
 | solution_id | long |  18  |      N       | 评测 id（主键） |
 |    code     | text |  -   |      N       |     源代码      |
+
++ `news` 新闻（公告）表
+
+|   字段名    |   类型   | 长度 | 是否允许为空 |      备注       |
+| :---------: | :------: | :--: | :----------: | :-------------: |
+|   news_id   |   int    |  11  |      N       | 新闻 id（主键） |
+|    title    | varchar  |  60  |      N       |    新闻标题     |
+|  abstract   | varchar  | 255  |      Y       |    新闻摘要     |
+|   context   |   text   |  -   |      Y       |    新闻内容     |
+|   picture   | varchar  | 255  |      Y       |    新闻封面     |
+| create_date | datetime |  -   |      Y       |    创建时间     |
 
 
 
