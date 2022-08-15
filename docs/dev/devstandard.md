@@ -30,6 +30,9 @@
 1. 请求参数 `DTO` 类的定义统一用 `DTO` 结尾
 2. 查询请求参数 `DTO` 类的定义统一用 `QueryDTO` 结尾
 3. 分页查询请求参数 `DTO` 类的定义统一用 `PageQueryDTO` 结尾
+4. 增加实体类操作请求参数 `DTO` 类的定义统一用 `AddDTO` 结尾
+5. 更新实体类操作请求参数 `DTO` 类的定义统一用 `UpdateDTO` 结尾
+
 
 ## VO的编写规范
 
@@ -62,5 +65,6 @@ public void add(ProblemDTO problemDTO) {
     - 字符串判空：StringUtils
     - 集合判空：CollectionUtils
     - 对象判空：Objects
-              
 
+## 包的命名
+1. 需对dto、vo的类存放进行分类，如与problem相关的dto类需放置dto.problem包下，如共同的类则放置在dto.common包下，vo对象同理。
