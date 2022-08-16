@@ -39,6 +39,7 @@
 |    salt     | varchar  | 100  |      N       |                         盐值（uuid）                         |
 |    nick     | varchar  |  30  |      N       |                             昵称                             |
 |    email    | varchar  |  60  |      N       |                             邮箱                             |
+|    avatar    | varchar  |  60  |      N       |                             头像                             |
 |   status    |   char   |  1   |      N       |                       是否禁用（Y/N）                        |
 | description |   text   |  -   |      Y       |                           自我介绍                           |
 |   solved    |   int    |  11  |      Y       | 通过题目数（具体 solved 的题目可通过 solution查询，设立该字段的目的是为了方便排名） |
@@ -107,8 +108,8 @@
 |    title     | varchar  | 50   |      N       |                           题目标题                           |
 |   content    |   text   | -    |      N       | 题目描述、输入描述、输出描述、样例、数据范围均由写入该字段，前端需集成 markdown 编辑器 |
 |    level     |   int    | 11   |      N       |                           题目难度                           |
-|  time_limit  |   int    | 11   |      N       |         时间限制(ms)，默认为c/c++限制,其它语言为2倍          |
-| memory_limit |   int    | 11   |      N       |         空间限制(mb)，默认为c/c++限制,其它语言为2倍          |
+|  time  |   int    | 11   |      N       |         时间限制(ms)，默认为c/c++限制,其它语言为2倍          |
+| memory |   int    | 11   |      N       |         空间限制(mb)，默认为c/c++限制,其它语言为2倍          |
 |    status    |          | 1    |      N       |                       是否可见（Y/N）                        |
 |      ac      |   int    | 11   |      Y       |                   通过（Accepted）的提交数                   |
 |      wa      |   int    | 11   |      Y       |                 错误（Wrong Answer）的提交数                 |
